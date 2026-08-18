@@ -1,16 +1,28 @@
-def transpose(matrix):
+def input_matrix():
+    rows=int(input("Enter no. of rows:"))
+    colms=int(input("Enter no. of cols:"))
+    X=[]
+    print("Enter elements of matrix:")
 
-  rows = len(matrix)
-  colms = len(matrix[0])
+    for i in range(r):
+        row=list(map(int,input().split()))
+        X.append(row)
+    return X
 
-  output = [[matrix[i][j] for i in range(rows)] for j in range(cols)]
+X=input_matrix()
 
-  return result
+print("Matrix X:",X)
+#Transpose of matrix
+def transpose(X):
+     Trans=[]
+     for j in range(len(X[0])):
+         row=[]
+         for i in range(len(X)):
+             row.append(X[i][j])
+         Trans.append(row)
 
-
-matrix = [[1, 2, 3], [4, 5, 6]]
-
-new_matrix = transpose(matrix)
-print("Transpose of  Matrix :")
-for row in new_matrix:
-    print(row)
+     return Trans
+Trans=transpose(A)
+print("Transpose of A:")
+for row in Trans:
+     print(row)
